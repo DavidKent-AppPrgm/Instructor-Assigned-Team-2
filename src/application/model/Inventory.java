@@ -1,8 +1,7 @@
 package application.model;
 
-import application.Main;
-
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -10,13 +9,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-/*		Inventory Class
- *
- * 		Purpose:
- *
- * 		Notes:
- *
- *
+/**
+ * Inventory stores the data for all of the Kiosk's products.
  */
 public class Inventory {
 
@@ -29,20 +23,14 @@ public class Inventory {
     private final ArrayList<Product> alInventory = new ArrayList<>();
 
     //Constructors
-    /*
-     * Purpose:
-     * 	Will be called on by the KioskController to load inventory
-     * Parameters:
-     * 	None
-     * Returns:
-     * 	void
-     * Notes:
-     * 	also loads stock
+
+    /**
+     * Loads the inventory's data from the application's files.
      */
     public Inventory() {
         //read from Products file
         try {
-            Scanner productsBuffer = new Scanner(Main.class.getResourceAsStream("resources/Products.txt"));
+            Scanner productsBuffer = new Scanner(new File("Products.txt"));
             while (productsBuffer.hasNext()) {
                 String[] tempProduct = productsBuffer.nextLine().split("[,]");
                 //tempProduct[0] = Name
@@ -63,15 +51,11 @@ public class Inventory {
     }
 
     //Methods
-    /*
-     * Purpose:
-     * 	Used to get products
-     * Parameters:
-     * 	None
-     * Returns:
-     * 	ArrayList of Products
-     * Notes:
+
+    /**
+     * Retrieves a list of all of the Kiosk's products.
      *
+     * @return alInventory An ArrayList containing all of the Kiosk's products.
      */
     public ArrayList<Product> getInventory() {
         return alInventory;
@@ -91,16 +75,11 @@ public class Inventory {
         return mpStock.get(id);
     }
 
-    /*
-     * Purpose:
-     * 	Used to find a product in stock by id
-     * Parameters:
-     * 	I - Integer id							id number for the product being searched
-     * Returns:
-     * 	Product - 							if product with id is found
-     * 	null - 								if product not found
-     * Notes:
-     * 	Used for stock Map
+    /**
+     * Searches the inventory based on the provided product ID.
+     *
+     * @param id The given product ID.
+     * @return - A Product object or null based on whether the specified product was found.
      */
     private Product searchByID(Integer id) {
         for (Product product : alInventory) {
@@ -110,16 +89,11 @@ public class Inventory {
         return null;
     }
 
-    /*
-     * Purpose:
-     * 	Used to find a product in stock by name
-     * Parameters:
-     * 	I - Integer id							id number for the product being searched
-     * Returns:
-     * 	Product - 							if product with name is found
-     * 	null - 								if product not found
-     * Notes:
-     * 	Used for stock Map
+    /**
+     * Searches the inventory based on the provided product name.
+     *
+     * @param name The given product name.
+     * @return - A Product object or null based on whether the specified product was found.
      */
     private Product searchByName(String name) {
         for (Product product : alInventory) {
@@ -129,16 +103,11 @@ public class Inventory {
         return null;
     }
 
-    /*
-     * Purpose:
-     * 	Used to find products by hash-tag relevance search
-     * Parameters:
-     * 	I - String search					user entered search
-     * Returns:
-     * 	ArrayList of products with relevance to the search
-     * 	null - 								if no products found
-     * Notes:
-     * 	Uses Product description to find relevance to search
+    /**
+     * Searches the inventory for products based on user search input.
+     *
+     * @param search A String containing user search input.
+     * @return searchPop An ArrayList containing all the products that matched the user's search input.
      */
     public ArrayList<Product> searchByHash(String search) {
         ArrayList<Product> searchPop = new ArrayList<>();
@@ -155,16 +124,11 @@ public class Inventory {
         return searchPop;
     }
 
-    /*
-     * Purpose:
-     * 	Used to find product in inventory by name
-     * Parameters:
-     * 	I - String name						name of the product being searched
-     * Returns:
-     * 	Product - 							if product with name is found
-     * 	null - 								if product not found
-     * Notes:
-     * 	Used for inventory List
+    /**
+     * Used to retrieve a product based on a given product ID.
+     *
+     * @param id The given product ID.
+     * @return - A Product object or null based on whether the specified product was successfully retrieved.
      */
     public Product decrement(Integer id) {
         int dec = mpStock.get(id) - 1;
@@ -172,20 +136,15 @@ public class Inventory {
         return searchByID(id);
     }
 
-    /*
-     * Purpose:
-     * 	Adds a new items to the inventory and stock of the Kiosk
-     * Parameters:
-     * 	I - String name							name of Product
-     *  I - String description					description of Product
-     *  I - Integer id							id number for Product
-     *  I - int stockCount						number being added to Kiosk
-     *  I - double price						cost of Product
-     * Returns:
-     * 	Integer object of the id for the Product
-     * Notes:
-     * 	Should only be usable by the Admin
-     * 	changes files
+    /**
+     * Adds new items to the Kiosk's inventory based on the input provided by an Admin user.
+     *
+     * @param name        The new Product's given name.
+     * @param description The new Product's given description.
+     * @param id          The new Product's given ID.
+     * @param stockCount  The new Product's given stock amount.
+     * @param price       The new Product's given price.
+     * @return - An Integer object or null if the new product was successfully added to the inventory.
      */
     public Integer addNewProduct(String name, String description, Integer id, int stockCount, double price) {
         //make sure product doesn't already exist
@@ -203,7 +162,7 @@ public class Inventory {
         String str = name + "," + description + "," + id.toString() + "," + stockCount + "," + price + "0";
         BufferedWriter writer;
         try {
-            writer = new BufferedWriter(new FileWriter(Main.class.getResource("resources/Products.txt").getFile()));
+            writer = new BufferedWriter(new FileWriter(new File("Products.txt")));
             writer.append("\n");
             writer.append(str);
             writer.close();
@@ -214,17 +173,11 @@ public class Inventory {
         return id;
     }
 
-    /*
-     * Purpose:
-     * 	Used by Employees (or Admins) to add more stock to an exsiting item
-     * Parameters:
-     * 	Integer id						id number for Product
-     * 	int stockAdd					number of stock to add for Product
-     * Returns:
-     * 	void
-     * Notes:
-     * 	doens't create a new product if trying to add stock to non existent id
-     * changes files
+    /**
+     * Increases the stock amount of a Product specified by an Admin or Employee user.
+     *
+     * @param id       The ID of the specified Product.
+     * @param stockAdd The number of stock to add for the Product.
      */
     public void restock(Integer id, Integer stockAdd) {
         //add stock add amount to current stock count num
@@ -237,7 +190,7 @@ public class Inventory {
         //read from Products file
         int line = 1;
         try {
-            Scanner productsBuffer = new Scanner(Main.class.getResourceAsStream("resources/Products.txt"));
+            Scanner productsBuffer = new Scanner(new File("Products.txt"));
             while (line < id) {
                 productsBuffer.nextLine();
                 line++;
@@ -262,7 +215,7 @@ public class Inventory {
             //setup new string for entire file with changed line
             StringBuilder strFile = new StringBuilder();
             line = 1;
-            Scanner fileBuffer = new Scanner(Main.class.getResourceAsStream("resources/Products.txt"));
+            Scanner fileBuffer = new Scanner(new File("Products.txt"));
             while (fileBuffer.hasNext()) {
                 //change the line with Product to new strLine
                 if (line == id) {
@@ -280,7 +233,7 @@ public class Inventory {
             //write new string file into Products file
             BufferedWriter writer;
             try {
-                writer = new BufferedWriter(new FileWriter(Main.class.getResource("resources/Products.txt").getFile()));
+                writer = new BufferedWriter(new FileWriter(new File("Products.txt")));
                 writer.write(strFile.toString());
                 writer.close();
             } catch (IOException e1) {
@@ -291,7 +244,9 @@ public class Inventory {
         }
     }
 
-    //toString
+    /**
+     * Provides a textual representation of the entire Inventory.
+     */
     public String toString() {
         String printInventory = "";
         for (Product product : alInventory) {
