@@ -8,6 +8,7 @@ Instructor Assigned Team #2 - Kiosk Simulation System - CS-3443-001-Fall-2019-Ap
 
 
 ---Project Description---
+
 This Java project provides a simulation of a Kiosk application. It allows the user to login to the Kiosk as either an administrator, employee, or customer. For the former two account types, the user is given special permissions for manipulating account and/or product data. For all three account types, the user is able to view the Kiosk page, and can select and purchase from a variety of items.
 
 
