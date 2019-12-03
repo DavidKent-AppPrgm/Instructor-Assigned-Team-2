@@ -514,10 +514,6 @@ public class KioskController {
 		textAreaKiosk5.visibleProperty().setValue(true);
 		//will set invisible later based on inventory
 
-		if (iPosition == inventory.size()){
-			buttonNextPage.visibleProperty().setValue(false);
-			return;
-		}
 		//Product 0
 		if(iPosition < inventory.size() && !end){
 			//check if out of stock
@@ -627,6 +623,10 @@ public class KioskController {
 		//i.e. last page is met
 		if(end){
 			buttonNextPage.visibleProperty().setValue(false);
+		}
+		if (iPosition == inventory.size()){
+			buttonNextPage.visibleProperty().setValue(false);
+			return;
 		}
 	}
 
