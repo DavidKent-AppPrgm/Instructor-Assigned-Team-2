@@ -89,8 +89,8 @@ public class Cart {
 			subCost += currentProduct.getPrice()*count;
 		}
 		double tax = Math.round(subCost*.0625 * 100);
+		double totalCost = Math.round(tax + subCost * 100);
 		tax /= 100.0;
-		double totalCost = Math.round((subCost*.0625) + subCost * 100);
 		totalCost /= 100.0;
 		
 		strCart += "\n\n\n      Sub Cost: " + subCost;
