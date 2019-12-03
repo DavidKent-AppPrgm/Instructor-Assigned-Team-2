@@ -14,8 +14,8 @@ This Java project provides a simulation of a Kiosk application. It allows the us
 
 ---Looking at the code/entire program---
 
-1. Click on "Instructor_Assigned_Team_2_Kiosk.zip"
-2. Click on "View Raw" to download zip file
+1. Click on the green "Clone or download" button
+2. Click on "Download Zip" to download zip file
 *this is the enitre program*
 3. Move zip File to prefered location (i.e. a desktop)
 4. Extract the files to prefered location (i.e. a desktop or same place)
