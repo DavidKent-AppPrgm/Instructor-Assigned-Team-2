@@ -15,15 +15,18 @@
         <Font size="48.0" />
       </font>
     </Label>
-    <Button id="buttonKioskAdminPage" fx:id="buttonEmployeeAdminPage" layoutX="14.0" layoutY="754.0" mnemonicParsing="false" onAction="#buttonEmployeeAdminPageClicked" prefHeight="32.0" prefWidth="80.0" text="Admin" visible="false" />
-    <Button id="buttonKioskAdminPage" fx:id="buttonEmployeeKioskPage" layoutX="103.0" layoutY="562.0" mnemonicParsing="false" onAction="#buttonEmployeeKioskPageClicked" prefHeight="32.0" prefWidth="80.0" text="Kiosk" visible="true" />
-    <Button id="buttonAdminLogout" fx:id="buttonEmployeeLogout" layoutX="190.0" layoutY="562.0" mnemonicParsing="false" onAction="#buttonEmployeeLogoutClicked" prefHeight="32.0" prefWidth="80.0" text="Logout">
+    <Button id="buttonKioskAdminPage" fx:id="buttonEmployeeAdminPage" layoutX="14.0" layoutY="754.0" mnemonicParsing="false" onAction="#buttonEmployeeAdminPageClicked" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: blue;" text="Admin" textFill="WHITE" visible="false" />
+    <Button id="buttonKioskAdminPage" fx:id="buttonEmployeeKioskPage" layoutX="103.0" layoutY="562.0" mnemonicParsing="false" onAction="#buttonEmployeeKioskPageClicked" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: blue;" text="Kiosk" textFill="WHITE" visible="true">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+    <Button id="buttonAdminLogout" fx:id="buttonEmployeeLogout" layoutX="190.0" layoutY="562.0" mnemonicParsing="false" onAction="#buttonEmployeeLogoutClicked" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: blue;" text="Logout" textFill="WHITE">
       <font>
         <Font size="14.0" fx:id="x1" />
       </font>
     </Button>
     <TextArea id="textAreaAdmin" fx:id="textAreaEmployee" layoutX="453.0" layoutY="14.0" prefHeight="595.0" prefWidth="333.0" wrapText="true" />
-    <Button fx:id="buttonRestock" layoutX="230.0" layoutY="239.0" mnemonicParsing="false" onAction="#buttonRestockClicked" prefHeight="52.0" prefWidth="200.0" text="Restock">
+    <Button fx:id="buttonRestock" layoutX="230.0" layoutY="239.0" mnemonicParsing="false" onAction="#buttonRestockClicked" prefHeight="52.0" prefWidth="200.0" style="-fx-background-color: blue;" text="Restock" textFill="WHITE">
       <font>
         <Font size="24.0" />
       </font>

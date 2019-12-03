@@ -14,7 +14,7 @@
   <left>
     <AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: lavender;">
       <children>
-        <Label layoutX="24.0" layoutY="27.0" prefHeight="50.0" prefWidth="200.0" text="Kiosk">
+        <Label layoutX="23.0" layoutY="14.0" prefHeight="50.0" prefWidth="200.0" text="Kiosk">
           <font>
             <Font size="48.0" />
           </font>
@@ -25,12 +25,12 @@
             <TextField id="textFieldSearch" fx:id="textFieldKioskSearch" prefWidth="264.0" promptText="search" />
           </items>
         </ToolBar>
-        <Button fx:id="buttonNextPage" alignment="CENTER_LEFT" layoutX="550.0" layoutY="91.0" minWidth="68.0" mnemonicParsing="false" onAction="#buttonNextPageClicked" prefHeight="20.0" prefWidth="90.0" text="Next Page">
+        <Button fx:id="buttonNextPage" alignment="CENTER_LEFT" layoutX="550.0" layoutY="91.0" minWidth="68.0" mnemonicParsing="false" onAction="#buttonNextPageClicked" prefHeight="20.0" prefWidth="90.0" style="-fx-background-color: orange;" text="Next Page">
           <font>
             <Font size="14.0" fx:id="x1" />
           </font>
         </Button>
-        <Button id="buttonNextPage" fx:id="buttonPreviousPage" alignment="CENTER_LEFT" layoutX="24.0" layoutY="91.0" minWidth="68.0" mnemonicParsing="false" onAction="#buttonPreviousPageClicked" prefHeight="25.0" prefWidth="90.0" text="Previous Page" visible="false">
+        <Button id="buttonNextPage" fx:id="buttonPreviousPage" alignment="CENTER_LEFT" layoutX="24.0" layoutY="91.0" minWidth="68.0" mnemonicParsing="false" onAction="#buttonPreviousPageClicked" prefHeight="25.0" prefWidth="90.0" style="-fx-background-color: orange;" text="Previous Page" visible="false">
           <font>
             <Font size="11.0" />
           </font>
@@ -41,20 +41,50 @@
         <TextArea fx:id="textAreaKiosk4" layoutX="230.0" layoutY="350.0" minHeight="-Infinity" prefHeight="100.0" prefWidth="200.0" wrapText="true" />
         <TextArea fx:id="textAreaKiosk2" layoutX="436.0" layoutY="159.0" minHeight="-Infinity" prefHeight="100.0" prefWidth="200.0" wrapText="true" />
         <TextArea fx:id="textAreaKiosk5" layoutX="436.0" layoutY="350.0" minHeight="-Infinity" prefHeight="100.0" prefWidth="200.0" wrapText="true" />
-        <Button fx:id="buttonKioskAdminPage" layoutX="190.0" layoutY="47.0" mnemonicParsing="false" onAction="#buttonKioskAdminPageClicked" prefHeight="32.0" prefWidth="80.0" text="Admin" visible="false" />
-        <Button id="buttonKioskAdminPage" fx:id="buttonKioskEmployeePage" layoutX="190.0" layoutY="15.0" mnemonicParsing="false" onAction="#buttonKioskEmployeePageClicked" prefHeight="32.0" prefWidth="80.0" text="Employee" visible="false" />
-        <Button id="buttonAdminLogout" fx:id="buttonKioskLogout" font="$x1" layoutX="270.0" layoutY="15.0" mnemonicParsing="false" onAction="#buttonKioskLogoutClicked" prefHeight="32.0" prefWidth="80.0" text="Logout" />
+        <Button fx:id="buttonKioskAdminPage" layoutX="190.0" layoutY="48.0" mnemonicParsing="false" onAction="#buttonKioskAdminPageClicked" prefHeight="31.0" prefWidth="80.0" style="-fx-background-color: blue;" text="Admin" textFill="WHITE" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+        <Button id="buttonKioskAdminPage" fx:id="buttonKioskEmployeePage" layoutX="190.0" layoutY="14.0" mnemonicParsing="false" onAction="#buttonKioskEmployeePageClicked" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: blue;" text="Employee" textFill="WHITE" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+        <Button id="buttonAdminLogout" fx:id="buttonKioskLogout" font="$x1" layoutX="270.0" layoutY="14.0" mnemonicParsing="false" onAction="#buttonKioskLogoutClicked" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: blue;" text="Logout" textFill="WHITE" />
         <TextArea fx:id="textAreaCart" layoutX="653.0" layoutY="123.0" prefHeight="382.0" prefWidth="140.0" wrapText="true" />
         <Label font="$x1" layoutX="683.0" layoutY="91.0" prefHeight="25.0" prefWidth="80.0" text="Check Out:" />
-        <Button fx:id="buttonAddToCart0" layoutX="83.0" layoutY="279.0" mnemonicParsing="false" onAction="#buttonAddToCartClicked" text="Add to Cart" />
-        <Button fx:id="buttonAddToCart1" layoutX="294.0" layoutY="279.0" mnemonicParsing="false" onAction="#buttonAddToCartClicked" text="Add to Cart" />
-        <Button fx:id="buttonAddToCart2" layoutX="500.0" layoutY="279.0" mnemonicParsing="false" onAction="#buttonAddToCartClicked" text="Add to Cart" />
-        <Button fx:id="buttonAddToCart3" layoutX="83.0" layoutY="475.0" mnemonicParsing="false" onAction="#buttonAddToCartClicked" text="Add to Cart" />
-        <Button fx:id="buttonAddToCart4" layoutX="294.0" layoutY="475.0" mnemonicParsing="false" onAction="#buttonAddToCartClicked" text="Add to Cart" />
-        <Button fx:id="buttonAddToCart5" layoutX="500.0" layoutY="475.0" mnemonicParsing="false" onAction="#buttonAddToCartClicked" text="Add to Cart" />
-        <Button fx:id="buttonClearCart" font="$x1" layoutX="681.0" layoutY="516.0" mnemonicParsing="false" onAction="#buttonClearCartClicked" prefHeight="32.0" prefWidth="82.0" text="Clear Cart" visible="false" />
-        <Button fx:id="buttonBuy" font="$x1" layoutX="681.0" layoutY="564.0" mnemonicParsing="false" onAction="#buttonBuyClicked" prefHeight="32.0" prefWidth="85.0" text="Buy" visible="false" />
-        <Button id="buttonAdminLogout" font="$x1" layoutX="350.0" layoutY="15.0" mnemonicParsing="false" onAction="#buttonKioskHomeClicked" prefHeight="32.0" prefWidth="80.0" text="Home" />
+        <Button fx:id="buttonAddToCart0" layoutX="83.0" layoutY="279.0" mnemonicParsing="false" onAction="#buttonAddToCartClicked" style="-fx-background-color: green;" text="Add to Cart">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font></Button>
+        <Button fx:id="buttonAddToCart1" layoutX="294.0" layoutY="279.0" mnemonicParsing="false" onAction="#buttonAddToCartClicked" style="-fx-background-color: green;" text="Add to Cart">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font></Button>
+        <Button fx:id="buttonAddToCart2" layoutX="500.0" layoutY="279.0" mnemonicParsing="false" onAction="#buttonAddToCartClicked" style="-fx-background-color: green;" text="Add to Cart">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font></Button>
+        <Button fx:id="buttonAddToCart3" layoutX="83.0" layoutY="475.0" mnemonicParsing="false" onAction="#buttonAddToCartClicked" style="-fx-background-color: green;" text="Add to Cart">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font></Button>
+        <Button fx:id="buttonAddToCart4" layoutX="294.0" layoutY="475.0" mnemonicParsing="false" onAction="#buttonAddToCartClicked" style="-fx-background-color: green;" text="Add to Cart">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font></Button>
+        <Button fx:id="buttonAddToCart5" layoutX="500.0" layoutY="475.0" mnemonicParsing="false" onAction="#buttonAddToCartClicked" style="-fx-background-color: green;" text="Add to Cart">
+               <font>
+                  <Font name="System Bold Italic" size="11.0" />
+               </font></Button>
+        <Button fx:id="buttonClearCart" layoutX="681.0" layoutY="516.0" mnemonicParsing="false" onAction="#buttonClearCartClicked" prefHeight="32.0" prefWidth="82.0" style="-fx-background-color: red;" text="Clear Cart" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+        <Button fx:id="buttonBuy" layoutX="681.0" layoutY="564.0" mnemonicParsing="false" onAction="#buttonBuyClicked" prefHeight="32.0" prefWidth="85.0" style="-fx-background-color: green;" text="Buy" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="12.0" />
+               </font></Button>
+        <Button id="buttonAdminLogout" font="$x1" layoutX="350.0" layoutY="14.0" mnemonicParsing="false" onAction="#buttonKioskHomeClicked" prefHeight="32.0" prefWidth="80.0" style="-fx-background-color: blue;" text="Home" textFill="WHITE" />
       </children>
     </AnchorPane>
   </left>

@@ -26,7 +26,7 @@
       </toggleGroup>
     </RadioButton>
     <RadioButton id="rbProducts" fx:id="rbAccounts" layoutX="329.0" layoutY="517.0" mnemonicParsing="false" text="Display Accounts" toggleGroup="$Display" />
-    <Button fx:id="buttonAdminLoad" layoutX="329.0" layoutY="554.0" mnemonicParsing="false" onAction="#buttonAdminLoadClicked" prefHeight="42.0" prefWidth="108.0" text="Load">
+    <Button fx:id="buttonAdminLoad" layoutX="329.0" layoutY="554.0" mnemonicParsing="false" onAction="#buttonAdminLoadClicked" prefHeight="42.0" prefWidth="108.0" style="-fx-background-color: blue;" text="Load" textFill="WHITE">
       <font>
         <Font size="24.0" fx:id="x1" />
       </font>
@@ -34,15 +34,18 @@
     <Label fx:id="labelCustomer" layoutX="383.0" layoutY="14.0" text="0 - Customer" visible="false" />
     <Label fx:id="labelEmployee" layoutX="383.0" layoutY="38.0" text="1 - Employee" visible="false" />
     <Label fx:id="labelAdmin" layoutX="383.0" layoutY="62.0" text="2 - Admin" visible="false" />
-    <Button id="button" fx:id="buttonAdminKiosk" font="$x1" layoutX="142.0" layoutY="494.0" mnemonicParsing="false" onAction="#buttonAdminKioskClicked" prefHeight="30.0" prefWidth="100.0" text="Kiosk" />
-    <Button id="button" fx:id="buttonAdminEmployee" font="$x1" layoutX="133.0" layoutY="554.0" mnemonicParsing="false" onAction="#buttonAdminEmployeeClicked" prefHeight="42.0" prefWidth="146.0" text="Employee" />
+    <Button id="button" fx:id="buttonAdminKiosk" layoutX="142.0" layoutY="494.0" mnemonicParsing="false" onAction="#buttonAdminKioskClicked" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: blue;" text="Kiosk" textFill="WHITE">
+         <font>
+            <Font size="24.0" />
+         </font></Button>
+    <Button id="button" fx:id="buttonAdminEmployee" font="$x1" layoutX="133.0" layoutY="554.0" mnemonicParsing="false" onAction="#buttonAdminEmployeeClicked" prefHeight="42.0" prefWidth="146.0" style="-fx-background-color: blue;" text="Employee" textFill="WHITE" />
     <MenuButton layoutX="10.0" layoutY="78.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="108.0" text="Menu">
       <items>
         <MenuItem fx:id="menuButtonAddProduct" mnemonicParsing="false" onAction="#menuButtonAddProductClicked" text="Add Product" />
         <MenuItem fx:id="menuButtonAddAccount" mnemonicParsing="false" onAction="#menuButtonAddAccountClicked" text="Add Account" />
       </items>
     </MenuButton>
-    <Button id="buttonAdminAdd" fx:id="buttonAdminAddProduct" font="$x1" layoutX="14.0" layoutY="167.0" mnemonicParsing="false" onAction="#buttonAdminAddProductClicked" prefHeight="38.0" prefWidth="100.0" text="Add" visible="false" />
+    <Button id="buttonAdminAdd" fx:id="buttonAdminAddProduct" font="$x1" layoutX="14.0" layoutY="167.0" mnemonicParsing="false" onAction="#buttonAdminAddProductClicked" prefHeight="38.0" prefWidth="100.0" style="-fx-background-color: blue;" text="Add" textFill="WHITE" visible="false" />
     <TextField id="textFieldAdmin" fx:id="textFieldAdmin0" layoutX="242.0" layoutY="167.0" prefWidth="200.0" visible="false" />
     <TextField id="textFieldAdmin" fx:id="textFieldAdmin1" layoutX="242.0" layoutY="198.0" prefWidth="200.0" visible="false" />
     <TextField fx:id="textFieldAdmin2" layoutX="242.0" layoutY="233.0" prefWidth="200.0" visible="false" />
@@ -51,10 +54,10 @@
     <Label fx:id="labelAdmin2" layoutX="122.0" layoutY="233.0" prefHeight="21.999900000002526" prefWidth="110.0" text="***" visible="false" />
     <TextField id="textFieldAdmin2" fx:id="textFieldAdmin3" layoutX="242.0" layoutY="269.0" prefWidth="200.0" visible="false" />
     <Label id="labelAdmin2" fx:id="labelAdmin3" layoutX="122.0" layoutY="269.0" prefHeight="21.999900000002526" prefWidth="110.0" text="***" visible="false" />
-    <Button id="buttonAdminAdd" fx:id="buttonAdminAddAccount" font="$x1" layoutX="14.0" layoutY="216.0" mnemonicParsing="false" onAction="#buttonAdminAddAccountClicked" prefHeight="38.0" prefWidth="100.0" text="Add" visible="false" />
-    <Button fx:id="buttonAdminLogout" layoutX="24.0" layoutY="556.0" mnemonicParsing="false" onAction="#buttonAdminLogoutClicked" prefHeight="42.0" prefWidth="80.0" text="Logout">
+    <Button id="buttonAdminAdd" fx:id="buttonAdminAddAccount" font="$x1" layoutX="14.0" layoutY="216.0" mnemonicParsing="false" onAction="#buttonAdminAddAccountClicked" prefHeight="38.0" prefWidth="100.0" style="-fx-background-color: blue;" text="Add" textFill="WHITE" visible="false" />
+    <Button fx:id="buttonAdminLogout" layoutX="24.0" layoutY="556.0" mnemonicParsing="false" onAction="#buttonAdminLogoutClicked" prefHeight="42.0" prefWidth="80.0" style="-fx-background-color: blue;" text="Logout" textFill="WHITE">
       <font>
-        <Font size="14.0" />
+        <Font size="18.0" />
       </font>
     </Button>
   </children>

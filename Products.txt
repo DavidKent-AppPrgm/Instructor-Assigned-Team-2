@@ -22,7 +22,7 @@ Bench,bench chair,21,20,80.00
 Soccer Ball,soccerball ball soccer,22,20,25.00
 Tenis Ball,tenisball ball tenis,23,100,5.00
 Golf Ball,golfball golf ball,24,100,1.00
-Book Shelf,bookshelf book shelf,25,11,80.00
+Book Shelf,bookshelf book shelf,25,8,80.00
 Tile,tilefloor tile floor,26,999,3.00
 Wood Floor,woodfloor wood floor,27,600,15.00
 Picture Frame,pictureframe picture frame,28,7,25.00
