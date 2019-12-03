@@ -5,37 +5,54 @@ Instructor Assigned Team #2 - Kiosk Simulation System - CS-3443-001-Fall-2019-Ap
 
 ---Read Me---
 
-This project has been tested to work when imported into the following IDEs:
-1. Eclipse
-2. IntelliJ IDEA
-
-This project uses the Java 8 SDK and its included JavaFX libraries. In order to build it,
-you will need those libraries.
-
-The project can be run within those IDEs via their standard toolbar, or by building the jar
-executable and running it. The Kiosk application requires two files for persistence
-between runs: Accounts.txt and Products.txt. It will create these files in its
-working directory if they do not exist; otherwise, it will read them in. Make sure
-the program has write access to the directory it's running in, or else it will not
-be able to list products or accounts.
 
 
-Here are the default accounts you can use to log in:
+---Project Description---
 
-Default Admin Testing
+This Java project provides a simulation of a Kiosk application. It allows the user to login to the Kiosk as either an administrator, employee, or customer. For the former two account types, the user is given special permissions for manipulating account and/or product data. For all three account types, the user is able to view the Kiosk page, and can select and purchase from a variety of items.
 
--Username =Admin -Password =Admin
 
-Default Employee Testing
+---Looking at the code/entire program---
 
--Username =employee -Password =employee
+1. Click on "Instructor_Assigned_Team_2_Kiosk.zip"
+2. Click on "View Raw" to download zip file
+*this is the enitre program*
+3. Move zip File to prefered location (i.e. a desktop)
+4. Extract the files to prefered location (i.e. a desktop or same place)
+*from here on out the instructions are for eclipse*
+5. Open up eclispse
+6. Click on "File" (upper left corner)
+7. Click on "Open Projects from File System..."
+8. Click on "Directory..."
+9. Locate the file on your computer (not the zip, the extracted version)
+10. Click it and Click "OK"
+11. Click on "Finish"
+*from here you have downloaded the project and can view any of the classes and fxml files*
+*if you have scene builder you can right click on each fxml and open wit scene builder*
+*you can click run to run the kiosk from here*
 
-Default Customer Testing
+*you can create a new account and test it that way as a customer*
+** USERNAME AND PASSWORDS ARE CASE SENSITIVE**
 
--Username =customer1 -Password =customer1
+default Admin Testing
 
-Another admin testing
+-Username =Admin
+-Password =Admin
 
--Username =dkintx -Password =password
+default Employee Testing
 
-all account information is stored in Account.txt same goes for products in Product.txt
+-Username =employee
+-Password =employee
+
+default Customer Testing
+
+-Username =customer1
+-Password =customer1
+
+another admin testing
+
+-Username =dkintx
+-Password =1234
+
+*all account information is stored in Account.txt*
+*same goes for products in Product.txt*
