@@ -84,7 +84,7 @@ Another Default Admin Testing Account
 *All account information is stored in Account.txt*
 
 
-###Test functionality of Customer
+### Test functionality of Customer
 
 The user of a type 0 Customer account must have full access to several available options:
 
@@ -104,7 +104,7 @@ The user of a type 0 Customer account must have full access to several available
 
 *Similar to how account information is stored, all product information should be stored in Product.txt*
 
-###Test functionality of Employee
+### Test functionality of Employee
 
 The user of a type 1 Employee account must have full access to several available options:
 
@@ -118,7 +118,7 @@ The user of a type 1 Employee account must have full access to several available
 
 -The user should be able to hit the logout button to return the user to the Login view.
 
-###Test functionality of Admin
+### Test functionality of Admin
 
 The user of a type 2 Admin account must have full access to several available options:
 
@@ -130,14 +130,14 @@ The user of a type 2 Admin account must have full access to several available op
 
 -The user should be able to hit the logout button to return the user to the Login view.
 
-##Contributors
-David Kent - DavidKent-AppPrgm - Team Leader, Code for Controller Classes.
+## Contributors
+David Kent - [DavidKent-AppPrgm](https://github.com/DavidKent-AppPrgm) - Team Leader, Code for Controller Classes.
 
-Riley Wurster - RileyWurster - Code for Model classes.
+Riley Wurster - [RileyWurster](https://github.com/RileyWurster) - Code for Model classes.
 
-Dean Valentine - hugbubby - Analyst and File Manager.
+Dean Valentine - [hugbubby](https://github.com/hugbubby) - Analyst and File Manager.
 
-Abner Vinaja - ssy089 - Tester, Refinement of Display
+Abner Vinaja - [ssy089](https://github.com/ssy089) - Tester, Refinement of Display
 
-##License
+## License
 UTSA © David Kent
