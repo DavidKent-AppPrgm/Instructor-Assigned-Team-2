@@ -13,6 +13,7 @@ This Java project provides a simulation of a Kiosk application. It allows the us
 
 
 ---Motivation---
+
 This program will be useful as a training program for potential store managers, allowing them to simulate what might happen for some aspects of a real store and gain experience prior to taking their job. If generalized and otherwise expanded, it could be used to help simulate a wider department store corporation's operations. Finally, the program could be used by other companies interested in working with or designing products to aid a department store, as a means of refining their approach.
 
 
@@ -75,6 +76,7 @@ another admin testing
 
 
 ---Test functionality of Customer---
+
 The user of a type 0 Customer account must have full access to several available options:
 -Viewing all available products in a graphical interface and being able to tab through them if they occupy more than one page with the next page / previous page buttons.
 -Narrowing down the visible products using the search mechanism, changing what products are visible by inputting descriptive keywords and hitting the search button
@@ -86,6 +88,7 @@ The user of a type 0 Customer account must have full access to several available
 *similar to how account information is stored, all product information should be stored in Product.txt*
 
 ---Test functionality of Employee---
+
 The user of a type 1 Employee account must have full access to several available options:
 -Viewing all products in a graphical box that gives the product data(including name, description, ID, and stock count)
 -Being able to input the ID of a product and a non-negative quantity count to increase the stock of that particular product, editing the Products file to make it persistent.
@@ -94,6 +97,7 @@ The user of a type 1 Employee account must have full access to several available
 -The user should be able to hit the logout button to return the user to the Login view.
 
 ---Test functionality of Admin---
+
 The user of a type 2 Admin account must have full access to several available options:
 -Displaying the data in the Accounts file or Products file in a processed format.
 -Being able to create a new Account or new Product and store the relevant data in the appropriate file. Doing this should require valid data in order to work, otherwise printing an error message.
